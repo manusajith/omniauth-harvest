@@ -13,7 +13,6 @@ module OmniAuth
         super.tap do |params|
           params[:response_type] = "code"
           params[:client_id] = client.id
-          params[:state] = 'optional-csrf-token'
           params[:redirect_uri] ||= callback_url
         end
       end
